@@ -7,5 +7,9 @@
  * 入口文件
  */
 
-//echo dirname(__FILE__).'/init.php';
+define('ROOT',dirname(__FILE__));
+
+//加载框架
+require ROOT.'/Fast/Jason.php';
+
 
