@@ -6,3 +6,4 @@
  * Date: 2017/4/19/019
  * Time: 21:49
  */
+//define('APP_DEBUG',true);

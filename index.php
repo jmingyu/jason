@@ -6,6 +6,7 @@
  * Time: 上午 10:27
  * 入口文件
  */
+date_default_timezone_set('Asia/Shanghai');//设置时区
 
 define('ROOT',dirname(__FILE__));
 
