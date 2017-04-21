@@ -16,11 +16,11 @@ class Core{
 
     //运行
     public function run(){
-//        spl_autoload_register(array($this,'loadClass'));
-//        $this->setError();
+        spl_autoload_register(array($this,'loadClass'));
         $error=new Error();
         $error->setError();
-//        $this->Route();
+        $this->unregisterGlobals();
+        $this->Route();
     }
 
     //路由处理
@@ -59,6 +59,43 @@ class Core{
             call_user_func_array(array($dispatch, $action), $param);
         } else {
             exit($controller . "控制器不存在");
+        }
+    }
+
+
+    // 检测自定义全局变量（register globals）并移除
+    public function unregisterGlobals()
+    {
+        if (ini_get('register_globals')) {
+            $array = array('_SESSION', '_POST', '_GET', '_COOKIE', '_REQUEST', '_SERVER', '_ENV', '_FILES');
+            foreach ($array as $value) {
+                foreach ($GLOBALS[$value] as $key => $var) {
+                    if ($var === $GLOBALS[$key]) {
+                        unset($GLOBALS[$key]);
+                    }
+                }
+            }
+        }
+    }
+
+    // 自动加载控制器和模型类
+    public static function loadClass($class)
+    {
+        $frameworks = FRAME_ROOT . $class . '.class.php';
+        $controllers = APP_ROOT . 'application/controllers/' . $class . '.class.php';
+        $models = APP_ROOT . 'application/models/' . $class . '.class.php';
+
+        if (file_exists($frameworks)) {
+            // 加载框架核心类
+            include $frameworks;
+        } elseif (file_exists($controllers)) {
+            // 加载应用控制器类
+            include $controllers;
+        } elseif (file_exists($models)) {
+            //加载应用模型类
+            include $models;
+        } else {
+            /* 错误代码 */
         }
     }
 
