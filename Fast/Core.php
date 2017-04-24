@@ -8,8 +8,7 @@
 /**
  * 核心框架
  */
-//echo FRAME_ROOT;
-require FRAME_ROOT.'/Fast/Error.php';
+require FRAME_ROOT.'/Error.php';
 
 
 class Core{
@@ -94,9 +93,11 @@ class Core{
         } elseif (file_exists($models)) {
             //加载应用模型类
             include $models;
-        } else {
-            /* 错误代码 */
         }
+//        else {
+//            /* 错误代码 */
+//            echo 404;
+//        }
     }
 
 

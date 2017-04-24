@@ -4,10 +4,10 @@
  * User: jiangmingyu
  * Date: 2017/4/21 0021
  * Time: 下午 17:50
- * 基类控制器
+ * 控制器基类
  */
 
-class BaseController{
+class Controller{
     protected $_controller;
     protected $_action;
     protected $_view;
