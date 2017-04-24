@@ -38,3 +38,6 @@
 [24-Apr-2017 17:15:01 Asia/Shanghai] PHP Fatal error:  Class 'Controller' not found in D:\xampp2\htdocs\test\jason\application\controllers\IndexController.class.php on line 4
 [24-Apr-2017 17:28:00 Asia/Shanghai] PHP Fatal error:  Call to undefined method IndexController::assign() in D:\xampp2\htdocs\test\jason\application\controllers\IndexController.class.php on line 7
 [24-Apr-2017 17:31:33 Asia/Shanghai] PHP Fatal error:  Class 'Controller' not found in D:\xampp2\htdocs\test\jason\application\controllers\IndexController.class.php on line 4
+[24-Apr-2017 17:36:58 Asia/Shanghai] PHP Fatal error:  Class 'Controller' not found in D:\xampp2\htdocs\test\jason\application\controllers\ItemController.class.php on line 11
+[24-Apr-2017 17:37:18 Asia/Shanghai] PHP Fatal error:  Class 'Controller' not found in D:\xampp2\htdocs\test\jason\application\controllers\ItemController.class.php on line 11
+[24-Apr-2017 17:37:34 Asia/Shanghai] PHP Fatal error:  Class 'Controller' not found in D:\xampp2\htdocs\test\jason\application\controllers\ItemController.class.php on line 11
