@@ -9,7 +9,7 @@
 date_default_timezone_set('Asia/Shanghai');//设置时区
 
 define('ROOT',dirname(__FILE__));
-
+require ROOT.'/Fast/Controller.class.php';
 //加载框架
 require ROOT.'/Fast/Jason.php';
 
