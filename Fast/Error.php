@@ -6,7 +6,7 @@
  * Time: 下午 17:34
  */
 class Error{
-    //设置报错信息
+    //设置报错信息,每天把错误日志写到新的文件里面
     public function setError(){
         if (APP_DEBUG === true) {
             error_reporting(E_ALL);
