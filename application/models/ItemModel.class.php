@@ -1,6 +1,6 @@
 <?php
-
-class ItemModel extends Model
+namespace models;
+class ItemModel
 {
     /* 业务逻辑层实现 */
 }

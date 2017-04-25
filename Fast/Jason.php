@@ -18,6 +18,7 @@ require APP_ROOT . 'config/config.php';
 //包含核心框架类
 require FRAME_ROOT . 'Core.php';
 
+
 //实例化核心类
 $jason=new Core();
 $jason->run();

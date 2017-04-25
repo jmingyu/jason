@@ -6,7 +6,6 @@
  * Time: 下午 17:50
  * 控制器基类
  */
-
 class Controller{
     protected $_controller;
     protected $_action;

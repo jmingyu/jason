@@ -12,9 +12,9 @@ class ItemController extends Controller
     // 首页方法，测试框架自定义DB查询
     public function index()
     {
-        $items = (new ItemModel)->selectAll();
+//        $items = (new ItemModel)->selectAll();
         $this->assign('title', '全部条目');
-        $this->assign('items', $items);
+//        $this->assign('items', $items);
         $this->render();
     }
 
