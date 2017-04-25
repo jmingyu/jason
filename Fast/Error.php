@@ -5,7 +5,7 @@
  * Date: 2017/4/20 0020
  * Time: 下午 17:34
  */
-class Error{
+class Fast_Error{
     //设置报错信息,每天把错误日志写到新的文件里面
     public function setError(){
         if (APP_DEBUG === true) {

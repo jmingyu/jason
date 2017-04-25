@@ -16,7 +16,7 @@ class Core{
     //运行
     public function run(){
         spl_autoload_register(array($this,'loadClass'));
-        $error=new Error();
+        $error=new Fast_Error();
         $error->setError();
         $this->unregisterGlobals();
         $this->Route();

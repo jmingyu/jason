@@ -8,7 +8,7 @@
 //项目根目录
 defined('FRAME_ROOT') or define('FRAME_ROOT', dirname(__FILE__).'/');//框架目录
 defined('APP_ROOT') or define('APP_ROOT', dirname($_SERVER['SCRIPT_FILENAME']).'/');//项目目录
-defined('APP_DEBUG') or define('APP_DEBUG', false);//调试模式是否开启
+defined('APP_DEBUG') or define('APP_DEBUG', true);//调试模式是否开启
 defined('CONFIG_ROOT') or define('CONFIG_ROOT', APP_ROOT.'config/');//配置文件目录
 defined('RUNTIME_ROOT') or define('RUNTIME_ROOT', APP_ROOT.'runtime/');
 
