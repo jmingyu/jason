@@ -13,7 +13,7 @@
  * @author      dogstar <chanzonghuang@gmail.com> 2015-02-22
  */
 
-class PhalApi_Model_NotORM implements PhalApi_Model {
+class Fast_Model_NotORM implements Fast_Model {
 
     protected static $tableKeys = array();
 
@@ -122,7 +122,7 @@ class PhalApi_Model_NotORM implements PhalApi_Model {
     protected function loadTableKeys() {
         $tables = DI()->config->get('dbs.tables');
         if (empty($tables)) {
-            throw new PhalApi_Exception_InternalServerError(T('dbs.tables should not be empty'));
+            throw new Fast_Exception_InternalServerError('dbs.tables should not be empty');
         }
 
         foreach ($tables as $tableName => $tableConfig) {
