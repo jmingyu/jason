@@ -8,6 +8,7 @@
  */
 date_default_timezone_set('Asia/Shanghai');//设置时区
 
+define('HOST',$_SERVER['HTTP_HOST'].'/');
 define('ROOT',dirname(__FILE__));
 //加载框架
 require ROOT.'/Fast/Jason.php';
