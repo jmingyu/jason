@@ -46,7 +46,9 @@ class Core{
 
             // 获取URL参数
             array_shift($urlArray);
-            $param = $urlArray ? $urlArray : array();
+//            $param = $urlArray ? $urlArray : array();
+            $param = ['111','222'];
+
         }
 
         //实例化控制器

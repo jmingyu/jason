@@ -7,12 +7,13 @@
  * @link        http://www.phalapi.net/
  * @author      dogstar <chanzonghuang@gmail.com> 2015-02-05
  */
+require FRAME_ROOT . 'Exception.php';
 
 class Fast_Exception_InternalServerError extends Fast_Exception {
 
     public function __construct($message, $code = 0) {
         parent::__construct(
-            T('Interal Server Error: {message}', array('message' => $message)), 500 + $code
+            'Interal Server Error: {message}', array('message' => $message),500+$code
         );
     }
 }

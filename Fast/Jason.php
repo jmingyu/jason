@@ -16,14 +16,14 @@ defined('RUNTIME_ROOT') or define('RUNTIME_ROOT', APP_ROOT.'runtime/');
 require APP_ROOT . 'config/config.php';
 //包含notorm
 require  FRAME_ROOT.'DB/NotORM.php';
+//实例化数据库类
+//$notorm=new Fast_DB_NotORM($GLOBALS['db_config']);
 //包含核心框架类
 require FRAME_ROOT . 'Core.php';
 
-//实例化数据库类
-$notorm=new Fast_DB_NotORM($db_config);
+
+//var_dump($db_config);
+//var_dump($notorm->item->where('id',2)->fetch());
 //实例化核心类
 $jason=new Core();
 $jason->run();
-//var_dump($db_config['tables']);
-//var_dump(file_exists());
-//echo APP_ROOT.'>>>>>'.FRAME_ROOT;

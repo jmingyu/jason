@@ -1,1 +1,1 @@
-<a class="big" href="<?=$_SERVER['HTTP_HOST']?>item/index">成功添加<?php echo $count ?>条记录，点击返回</a>
+<a class="big" href="index">成功添加!现共有<?php echo $count ?>条记录，点击返回</a>

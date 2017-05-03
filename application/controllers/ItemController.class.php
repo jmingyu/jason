@@ -9,12 +9,14 @@
 
 class ItemController extends Controller
 {
+
     // 首页方法，测试框架自定义DB查询
     public function index()
     {
-//        $items = (new ItemModel)->selectAll();
+        $model = new ItemModel();
+        $items=$model->index();
         $this->assign('title', '全部条目');
-//        $this->assign('items', $items);
+        $this->assign('items', $items);
         $this->render();
     }
 
@@ -22,7 +24,8 @@ class ItemController extends Controller
     public function add()
     {
         $data['item_name'] = $_POST['value'];
-        $count = (new ItemModel)->add($data);
+        $model=new ItemModel();
+        $count=$model->add($data);
 
         $this->assign('title', '添加成功');
         $this->assign('count', $count);
@@ -32,11 +35,12 @@ class ItemController extends Controller
     // 查看记录，测试框架DB记录读取（Read）
     public function view($id = null)
     {
-        $item = (new ItemModel)->select($id);
-
-        $this->assign('title', '正在查看' . $item['item_name']);
-        $this->assign('item', $item);
-        $this->render();
+        var_dump($id);
+//        $item = (new ItemModel)->select($id);
+//
+//        $this->assign('title', '正在查看' . $item['item_name']);
+//        $this->assign('item', $item);
+//        $this->render();
     }
 
     // 更新记录，测试框架DB记录更新（Update）

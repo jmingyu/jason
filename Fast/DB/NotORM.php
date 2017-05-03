@@ -1,5 +1,6 @@
 <?php
 require_once FRAME_ROOT .  'NotORM/NotORM.php';
+require_once FRAME_ROOT . 'Exception/InternalServerError.php';
 
 /**
  * PhalApi_DB_NotORM 分布式的DB存储
@@ -94,10 +95,11 @@ class Fast_DB_NotORM /** implements PhalApi_DB */ {
      * @param array $configs 数据库配置 
      * @param boolean $debug 是否开启调试模式
      */
-    public function __construct($configs, $debug = FALSE) {
-        $this->_configs = $configs;
+    public function __construct($configs=null, $debug = FALSE) {
+        $this->_configs = $GLOBALS['db_config'];
 
         $this->debug = $debug;
+
     }
 
     public function __get($name) {
