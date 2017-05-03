@@ -46,8 +46,7 @@ class Core{
 
             // 获取URL参数
             array_shift($urlArray);
-//            $param = $urlArray ? $urlArray : array();
-            $param = ['111','222'];
+            $param = $urlArray ? $urlArray : array();
 
         }
 

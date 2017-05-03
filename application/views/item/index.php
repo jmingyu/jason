@@ -7,7 +7,7 @@
 <?php $number = 0?>
 
 <?php foreach ($items as $item): ?>
-    <a class="big" href="view/<?php echo $item['id'] ?>/12" title="点击修改">
+    <a class="big" href="view/<?php echo $item['id'] ?>" title="点击修改">
         <span class="item">
             <?php echo ++$number ?>
             <?php echo $item['item_name'] ?>

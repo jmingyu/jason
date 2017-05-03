@@ -17,4 +17,16 @@ class ItemModel extends Fast_DB_NotORM
         return self::$model->insert($data);
     }
 
+    public function view($id){
+        return self::$model->where('id',$id)->fetch();
+    }
+
+    public function update($id,$value){
+        return self::$model->where('id',$id)->update(['item_name'=>$value]);
+    }
+
+    public function delete($id){
+        return self::$model->where('id',$id)->delete();
+    }
+
 }
