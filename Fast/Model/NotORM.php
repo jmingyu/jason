@@ -13,7 +13,7 @@
  * @author      dogstar <chanzonghuang@gmail.com> 2015-02-22
  */
 
-class Fast_Model_NotORM implements Fast_Model {
+class Fast_Model_NotORM implements Model {
 
     protected static $tableKeys = array();
 
@@ -120,7 +120,8 @@ class Fast_Model_NotORM implements Fast_Model {
     }
 
     protected function loadTableKeys() {
-        $tables = DI()->config->get('dbs.tables');
+//        $tables = DI()->config->get('dbs.tables');
+        $tables = $db_config['tables'];
         if (empty($tables)) {
             throw new Fast_Exception_InternalServerError('dbs.tables should not be empty');
         }
